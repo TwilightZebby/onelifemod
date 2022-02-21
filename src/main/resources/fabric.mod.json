@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "onelifesmp",
+  "version": "${version}",
+  "name": "Onelifesmp",
+  "description": "Simple Server-side Fabric Mod for Dr1fterX's OneLife SMP",
+  "authors": [
+    "TwilightZebby"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/onelifesmp/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "client": [
+      "twilightzebby.onelifesmp.client.OnelifesmpClient"
+    ],
+    "main": [
+      "twilightzebby.onelifesmp.Onelifesmp"
+    ]
+  },
+  "mixins": [
+    "onelifesmp.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
