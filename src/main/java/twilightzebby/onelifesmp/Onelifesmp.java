@@ -50,6 +50,9 @@ public class Onelifesmp implements ModInitializer {
                         Text targetMessage = Text.of("You have been smitten!");
                         targetPlayer.sendMessage(new LiteralText(targetMessage.getString()).formatted(Formatting.YELLOW), false);
 
+                        // Notify in Console Log for Server Admins
+                        System.out.println("[" + ctx.getSource().getPlayer().getName().asString() + " issued command /smite]");
+
                         return Command.SINGLE_SUCCESS;
                     })))
                     .createBuilder();
