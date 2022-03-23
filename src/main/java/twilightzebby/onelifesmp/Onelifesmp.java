@@ -1,12 +1,17 @@
 package twilightzebby.onelifesmp;
 
 import com.mojang.brigadier.Command;
+import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.minecraft.command.argument.EntityArgumentType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtHelper;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import static net.minecraft.command.argument.EntityArgumentType.getPlayer;
@@ -25,6 +30,7 @@ public class Onelifesmp implements ModInitializer {
 
         // Register Commands
         CommandRegistrationCallback.EVENT.register(((dispatcher, dedicated) -> {
+            // /smite command
             dispatcher.register(CommandManager.literal("smite")
                     .requires(source -> source.hasPermissionLevel(2)) // Requires OP level 2 or higher
                     .then(argument("target", EntityArgumentType.player())
