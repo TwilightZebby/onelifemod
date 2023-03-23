@@ -3,6 +3,13 @@ A simple Server-side Fabric Mod, madeby TwilightZebby for [Dr1fterX's](https://w
 
 But hey, at least it gave TwilightZebby a chance to further his Java knowledge and step into the world of Minecraft: Java Edition Modding! :D
 
+---
+# THE LICENSE
+
+The License for this Project, and all of TwilightZebby's Projects, can be [found here](https://github.com/TwilightZebby/license/blob/main/license.md).
+
+---
+
 ## Commands
 
 | Command         | Access Level | Description                          |
